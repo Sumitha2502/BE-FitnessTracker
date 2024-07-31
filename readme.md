@@ -1,4 +1,4 @@
-#FullStack Development 
+#Full Stack Development 
 
 ##About
 
@@ -8,10 +8,10 @@ Backend Application is a RESTful API developed using Node.js and Express.js. It 
 
 ###Backend Setup
 
-[]Node.js: To create a server
-[]Express.js: To create a REST API
-[]Nodemon: Auto Restart Server if any changes in the code
-[]Postman: Testing API
-[]Database - MongoDB - Atlas Cloud
-[]Mongoose - MongoDB Object Data Modeling
-[]MongoDB Compass: To visualize the data
+-[]Node.js: To create a server
+-[]Express.js: To create a REST API
+-[]Nodemon: Auto Restart Server if any changes in the code
+-[]Postman: Testing API
+-[]Database - MongoDB - Atlas Cloud
+-[]Mongoose - MongoDB Object Data Modeling
+-[]MongoDB Compass: To visualize the data
