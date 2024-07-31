@@ -1,0 +1,23 @@
+{
+  "name": "be-fitnesstracker",
+  "version": "1.0.0",
+  "description": "backend application -RestfulAPI -nodejs & express.js & mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumitha2502/BE-FitnessTracker.git"
+  },
+  "author": "Sumitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sumitha2502/BE-FitnessTracker/issues"
+  },
+  "homepage": "https://github.com/Sumitha2502/BE-FitnessTracker#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.5.2"
+  }
+}
