@@ -15,12 +15,10 @@ const cookieParser = require('cookie-parser');
 
 // require morgan
 const morgan = require('morgan');
-const companyRouter = require('./routes/companyRoutes');
-const jobRouter = require('./routes/jobRoutes');
 
 // use the cors middleware
 app.use(cors({
-    origin: '*', // allow all origins
+    origin: '*', 
     credentials: true
 }));
 
@@ -36,13 +34,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.head('/api', (req, res) => {
-    res.send('Welcome to the Job Portal API');
+    res.send('Welcome to JustFit');
 });
 
 // define the endpoints
 app.use('/api/users', userRouter);
-app.use('/api/companies', companyRouter);
-app.use('/api/jobs', jobRouter);
 
 // export the app module
 module.exports = app;
