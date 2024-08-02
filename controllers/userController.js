@@ -266,103 +266,103 @@ const userController = {
 
 
     // define the nutrtion method
-    Nutrition: async (request, response) => {
-        try {
-            // get the user inputs from the request body
-            const { date, calories, carbs, protein, fat, water } = request.body;
+    // Nutrition: async (request, response) => {
+    //     try {
+    //         // get the user inputs from the request body
+    //         const { date, calories, carbs, protein, fat, water } = request.body;
 
-            // check if the username already exists
-            const user = await User.findOne({ date });
+    //         // check if the username already exists
+    //         const user = await User.findOne({ date });
 
-            // if the username exists, return an error message
-            if (user) {
-                return response.status(400).json({ message: 'User already exists' });
-            }
+    //         // if the username exists, return an error message
+    //         if (user) {
+    //             return response.status(400).json({ message: 'User already exists' });
+    //         }
 
-            // hash the password
-            const passwordHash = await bcrypt.hash(password, 10);
+    //         // hash the password
+    //         const passwordHash = await bcrypt.hash(password, 10);
 
-            // create a new user
-            const newUser = new User({
-                date, calories, carbs, protein, fat, water
-            });
+    //         // create a new user
+    //         const newUser = new User({
+    //             date, calories, carbs, protein, fat, water
+    //         });
 
-            // save the user
-            const savedUser = await newUser.save();
+    //         // save the user
+    //         const savedUser = await newUser.save();
 
-            // return a success message with the saved user
-            response.status(201).json({ message: 'User created successfully', user: savedUser });
+    //         // return a success message with the saved user
+    //         response.status(201).json({ message: 'User created successfully', user: savedUser });
 
-            // response.status(201).json({ message: 'User created successfully' });
-        } catch (error) {
-            response.status(500).json({ message: error.message });
-        }
-    },
+    //         // response.status(201).json({ message: 'User created successfully' });
+    //     } catch (error) {
+    //         response.status(500).json({ message: error.message });
+    //     }
+    // },
 
-    Goals: async (request, response) => {
-        try {
-            // get the user inputs from the request body
-            const { title, description, targetDate } = request.body;
+    // Goals: async (request, response) => {
+    //     try {
+    //         // get the user inputs from the request body
+    //         const { title, description, targetDate } = request.body;
 
-            // check if the username already exists
-            const user = await User.findOne({ title });
+    //         // check if the username already exists
+    //         const user = await User.findOne({ title });
 
-            // if the username exists, return an error message
-            if (user) {
-                return response.status(400).json({ message: 'User already exists' });
-            }
+    //         // if the username exists, return an error message
+    //         if (user) {
+    //             return response.status(400).json({ message: 'User already exists' });
+    //         }
 
-            // hash the password
-            const passwordHash = await bcrypt.hash(password, 10);
+    //         // hash the password
+    //         const passwordHash = await bcrypt.hash(password, 10);
 
-            // create a new user
-            const newUser = new User({
-                title, description, targetDate
-            });
+    //         // create a new user
+    //         const newUser = new User({
+    //             title, description, targetDate
+    //         });
 
-            // save the user
-            const savedUser = await newUser.save();
+    //         // save the user
+    //         const savedUser = await newUser.save();
 
-            // return a success message with the saved user
-            response.status(201).json({ message: 'User created successfully', user: savedUser });
+    //         // return a success message with the saved user
+    //         response.status(201).json({ message: 'User created successfully', user: savedUser });
 
-            // response.status(201).json({ message: 'User created successfully' });
-        } catch (error) {
-            response.status(500).json({ message: error.message });
-        }
-    },
-    sleepPatterns: async (request, response) => {
-        try {
-            // get the user inputs from the request body
-            const { date, duration, quality } = request.body;
+    //         // response.status(201).json({ message: 'User created successfully' });
+    //     } catch (error) {
+    //         response.status(500).json({ message: error.message });
+    //     }
+    // },
+    // sleepPatterns: async (request, response) => {
+    //     try {
+    //         // get the user inputs from the request body
+    //         const { date, duration, quality } = request.body;
 
-            // check if the username already exists
-            const user = await User.findOne({ date });
+    //         // check if the username already exists
+    //         const user = await User.findOne({ date });
 
-            // if the username exists, return an error message
-            if (user) {
-                return response.status(400).json({ message: 'User already exists' });
-            }
+    //         // if the username exists, return an error message
+    //         if (user) {
+    //             return response.status(400).json({ message: 'User already exists' });
+    //         }
 
-            // hash the password
-            const passwordHash = await bcrypt.hash(password, 10);
+    //         // hash the password
+    //         const passwordHash = await bcrypt.hash(password, 10);
 
-            // create a new user
-            const newUser = new User({
-                date, duration, quality
-            });
+    //         // create a new user
+    //         const newUser = new User({
+    //             date, duration, quality
+    //         });
 
-            // save the user
-            const savedUser = await newUser.save();
+    //         // save the user
+    //         const savedUser = await newUser.save();
 
-            // return a success message with the saved user
-            response.status(201).json({ message: 'User created successfully', user: savedUser });
+    //         // return a success message with the saved user
+    //         response.status(201).json({ message: 'User created successfully', user: savedUser });
 
-            // response.status(201).json({ message: 'User created successfully' });
-        } catch (error) {
-            response.status(500).json({ message: error.message });
-        }
-    }
+    //         // response.status(201).json({ message: 'User created successfully' });
+    //     } catch (error) {
+    //         response.status(500).json({ message: error.message });
+    //     }
+    // }
 
 }
 // export the controller
