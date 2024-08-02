@@ -28,9 +28,4 @@ app.post('/api/sleep', async (req, res) => {
     res.json(newEntry);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${config.PORT}`);
-});
-
-
 module.exports = mongoose.model('Sleep', sleepSchema, 'sleep');

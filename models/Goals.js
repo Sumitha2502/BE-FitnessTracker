@@ -34,9 +34,5 @@ app.put('/api/goals/:id', async (req, res) => {
     res.json({ success: true });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${config.PORT}`);
-});
-
 
 module.exports = mongoose.model('Goal', goalSchema, 'goal');
