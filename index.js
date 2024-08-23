@@ -25,4 +25,3 @@ mongoose.connect(config.MongoDB_URI)
         console.log('Error connecting to MongoDB...', error.message);
     })
 
-    
