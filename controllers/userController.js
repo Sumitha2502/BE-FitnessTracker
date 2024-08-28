@@ -7,9 +7,9 @@ const bcrypt = require('bcrypt');
 // import the jsonwebtoken library
 const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = require('../utils/config');
-// const Nutrition = require('../models/Nutrition');
-// const Goals = require('../models/Goals');
-// const sleepPatterns = require('../models/sleepPatterns');
+const Nutrition = require('../models/Nutrition');
+const Goals = require('../models/Goals');
+const sleepPatterns = require('../models/sleepPatterns');
 
 // define the user controller
 const userController = {

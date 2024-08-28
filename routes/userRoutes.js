@@ -11,9 +11,9 @@ const userRouter = express.Router();
 // define the endpoints
 userRouter.post('/', userController.register);
 userRouter.post('/login', userController.login);
-// userRouter.post('/nutrition', userController.Nutrition);
-// userRouter.post('/goal', userController.Goals);
-// userRouter.post('/sleepPattern', userController.sleepPatterns);
+userRouter.post('/nutrition', userController.Nutrition);
+userRouter.post('/goal', userController.Goals);
+userRouter.post('/sleepPattern', userController.sleepPatterns);
 
 // authenticated route
 userRouter.get('/me', auth.isAuth, userController.me);
