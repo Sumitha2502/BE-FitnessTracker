@@ -18,12 +18,13 @@ const morgan = require('morgan');
 
 // use the cors middleware
 app.use(cors({
-    origin: '*', 
+    origin: 'https://splendid-sable-ded7c2.netlify.app', 
     credentials: true
 }));
 
 // use the cookie-parser middleware
 app.use(cookieParser());
+
 
 // use the morgan middleware
 app.use(morgan('dev'));
