@@ -18,7 +18,8 @@ const morgan = require('morgan');
 
 // use the cors middleware
 app.use(cors({
-    origin: 'https://splendid-sable-ded7c2.netlify.app', 
+    //https://splendid-sable-ded7c2.netlify.app
+    origin: '*', 
     credentials: true
 }));
 
