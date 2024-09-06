@@ -18,18 +18,18 @@ const goalSchema = new mongoose.Schema({
 
 const Goal = mongoose.model('Goal', goalSchema);
 
-app.get('/api/goals', async (req, res) => {
+app.get('https://be-fitnesstracker-4.onrender.com/api/goals', async (req, res) => {
     const goals = await Goal.find();
     res.json(goals);
 });
 
-app.post('/api/goals', async (req, res) => {
+app.post('https://be-fitnesstracker-4.onrender.com/api/goals', async (req, res) => {
     const newGoal = new Goal(req.body);
     await newGoal.save();
     res.json(newGoal);
 });
 
-app.put('/api/goals/:id', async (req, res) => {
+app.put('https://be-fitnesstracker-4.onrender.com/api/goals/:id', async (req, res) => {
     await Goal.findByIdAndUpdate(req.params.id, { achieved: true });
     res.json({ success: true });
 });
