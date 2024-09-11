@@ -1,6 +1,6 @@
 // import the user model
 const User = require('../models/user');
-
+const config = require('../utils/config');
 // import the bcrypt library
 const bcrypt = require('bcrypt');
 

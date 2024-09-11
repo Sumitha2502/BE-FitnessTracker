@@ -1,5 +1,6 @@
 // import the express router
 const express = require('express');
+const config = require('../utils/config');
 
 // import the user controller
 const userController = require('../controllers/userController');

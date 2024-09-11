@@ -1,8 +1,10 @@
 // require express
 const express = require('express');
+const config = require('./utils/config');
 
 // import the user routes
 const userRouter = require('./routes/userRoutes');
+const goalRoute=require('./routes/goalRoute');
 
 // create an express app
 const app = express();
@@ -19,7 +21,7 @@ const morgan = require('morgan');
 // use the cors middleware
 app.use(cors({
     //https://splendid-sable-ded7c2.netlify.app
-    origin: '*', 
+    origin: 'https://splendid-sable-ded7c2.netlify.app', 
     credentials: true
 }));
 
@@ -41,6 +43,8 @@ app.head('/api', (req, res) => {
 
 // define the endpoints
 app.use('/api/users', userRouter);
+app.use('/api/goal', goalRoute);
+
 
 // export the app module
 module.exports = app;

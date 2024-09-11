@@ -17,15 +17,6 @@ const sleepSchema = new mongoose.Schema({
 
 const Sleep = mongoose.model('Sleep', sleepSchema);
 
-app.get('/api/sleep', async (req, res) => {
-    const entries = await Sleep.find();
-    res.json(entries);
-});
 
-app.post('/api/sleep', async (req, res) => {
-    const newEntry = new Sleep(req.body);
-    await newEntry.save();
-    res.json(newEntry);
-});
 
 module.exports = mongoose.model('Sleep', sleepSchema, 'sleep');

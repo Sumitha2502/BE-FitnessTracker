@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const config = require('./utils/config');
+const config = require('../utils/config');
 
 const app = express();
 app.use(bodyParser.json());
@@ -20,16 +20,5 @@ const nutritionSchema = new mongoose.Schema({
 });
 
 const Nutrition = mongoose.model('Nutrition', nutritionSchema);
-
-app.get('/api/nutrition', async (req, res) => {
-    const entries = await Nutrition.find();
-    res.json(entries);
-});
-
-app.post('/api/nutrition', async (req, res) => {
-    const newEntry = new Nutrition(req.body);
-    await newEntry.save();
-    res.json(newEntry);
-});
 
 module.exports = mongoose.model('Nutrition', nutritionSchema, 'nutrition');
